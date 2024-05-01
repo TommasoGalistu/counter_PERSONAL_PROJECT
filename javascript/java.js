@@ -9,26 +9,26 @@ let num= 0;
 incremento.addEventListener('click', () =>{
     num++
     numeroDaIncrementare.textContent= num
+    if(num>0){
+        numeroDaIncrementare.style.color= 'green'
+    }
 })
 
 decremento.addEventListener('click', () =>{
     num--
     numeroDaIncrementare.textContent= num
+    if(num<0){
+        numeroDaIncrementare.style.color= 'red'
+    }
 })
 
 resetta.addEventListener('click', () =>{
     num=0
     numeroDaIncrementare.textContent= num
+    numeroDaIncrementare.style.color= 'black'
 
 })
 
 
-// bottoni.addEventListener('click', () => {
 
-//     if(numeroDaIncrementare.textContent < 0){
-//         numeroDaIncrementare.style.color= 'red'
-//     }else if(numeroDaIncrementare.textContent > 0){
-//         numeroDaIncrementare.style.color= 'green'
-//     }
-// })
 
