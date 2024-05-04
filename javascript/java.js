@@ -27,7 +27,7 @@ resetta.addEventListener('click', () =>{
     numeroDaIncrementare.textContent= num
     numeroDaIncrementare.style.color= 'black'
 
-})
+}) 
 
 
 
