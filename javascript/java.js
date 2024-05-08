@@ -1,33 +1,36 @@
-let incremento= document.querySelector('#incr');
-let decremento= document.querySelector('#decr');
-let resetta=document.querySelector('#res')
-let numeroDaIncrementare= document.querySelector('#numero');
-let bottoni=document.querySelector('button')
+let numeroDaIncrementare = document.querySelector('#numero');
+let parentButton = document.querySelector('#contenitoreButton')
 
 let num= 0;
 
-incremento.addEventListener('click', () =>{
-    num++
-    numeroDaIncrementare.textContent= num
-    if(num>0){
-        numeroDaIncrementare.style.color= 'green'
-    }
-})
+parentButton.addEventListener('click', whichButton)
 
-decremento.addEventListener('click', () =>{
-    num--
-    numeroDaIncrementare.textContent= num
-    if(num<0){
+function whichButton(event){
+    if(event.target.id == 'decr'){
+        num--
+        numeroDaIncrementare.textContent= num
+
+        if(num<0){
         numeroDaIncrementare.style.color= 'red'
     }
-})
+    }else if(event.target.id == 'incr'){
+        num++
+        numeroDaIncrementare.textContent= num
 
-resetta.addEventListener('click', () =>{
-    num=0
-    numeroDaIncrementare.textContent= num
-    numeroDaIncrementare.style.color= 'black'
+        if(num>0){
+        numeroDaIncrementare.style.color= 'green'
+    }
 
-}) 
+    }else if(event.target.id == 'res'){
+        num=0
+        numeroDaIncrementare.textContent= num
+        numeroDaIncrementare.style.color= 'black'
+    }
+}
+
+
+
+
 
 
 
